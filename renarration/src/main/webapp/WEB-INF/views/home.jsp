@@ -27,7 +27,7 @@
 <body>
 	<h1>
 		This framework is designed to allow users to annotate and re-narrate web elements so that the content
-		on the Web will be more accessible to users.  
+		on the Web will be more accessible to users test.  
 	</h1>
 
 	<div id="paragraph">  
