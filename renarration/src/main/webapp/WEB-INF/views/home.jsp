@@ -8,6 +8,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 	<script src="http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js"></script>	
 	<script src="http://annotorious.github.com/latest/annotorious.okfn.js"></script>
+	<script src="http://localhost:8181/renarration/resources/js/re-narration.js"></script>
 	<!-- Java Script Includes -->
 	
 	<!-- CSS Includes -->
@@ -16,25 +17,19 @@
 	
 	<!-- Functions -->
 	<script>
-		$( document ).ready(function() {
-			var annotator = $('#paragraph').annotator();
-			annotator.annotator('addPlugin', 'AnnotoriousImagePlugin');
-			annotator.annotator('addPlugin', 'Tags');
-    	});
+
 	</script>
 	<!-- Functions -->	
 </head>
 <body>
 	<h1>
 		This framework is designed to allow users to annotate and re-narrate web elements so that the content
-		on the Web will be more accessible to users test.  
+		on the Web will be more accessible to users.  
 	</h1>
-
-	<div id="paragraph">  
-		The time on the server is ${serverTime}. 
-		<img src="http://2.bp.blogspot.com/_6HY7WJLhahk/TB_VIlq6PNI/AAAAAAAAAA8/y1iHBplkMlM/s400/code1.jpg">
-		
+	<input id = "btnSubmit" type="submit" value="Load" onClick="httpGet('http://localhost:8181/renarration/resources/a.html')"/>
+	<input id = "annotate" type="button" value="Annotate" onClick="enableAnnotationOnIframe('renarrationDiv')"/>
+	<div align="center">
+		<iframe id="renarrationDiv" width="80%" height="800"></iframe>
 	</div>
-	<iframe src="http://www.w3schools.com" id="paragraph" width="800" height="800"></iframe>
 </body>
 </html>
